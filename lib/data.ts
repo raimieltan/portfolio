@@ -6,6 +6,10 @@ export const profile = {
   email: "raimieltan@gmail.com",
   phone: "+63 909 985 1434",
   github: "https://github.com/raimieltan",
+  linkedin: "https://www.linkedin.com/in/sean-raimiel-tan-04bb4a1a6/",
+  youtube: "https://www.youtube.com/channel/UCwRBEzTX5cfc9tNnxXTTEaw",
+  devto: "https://dev.to/raimieltan",
+  instagram: "https://www.instagram.com/s.reymyel/",
   resumeHref: "/Sean_Tan_Resume.pdf",
   status: "Open to senior / staff backend and full-stack roles",
   headline:

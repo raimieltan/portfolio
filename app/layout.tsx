@@ -118,7 +118,13 @@ const personJsonLd = {
     addressRegion: "Western Visayas",
     addressCountry: "PH",
   },
-  sameAs: [profile.github],
+  sameAs: [
+    profile.github,
+    profile.linkedin,
+    profile.youtube,
+    profile.devto,
+    profile.instagram,
+  ],
   knowsAbout: [
     "Backend Engineering",
     "Full-Stack Development",
