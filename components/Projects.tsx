@@ -1,5 +1,37 @@
+import Link from "next/link";
 import { projects } from "@/lib/data";
 import { SectionLabel } from "./SectionLabel";
+
+function ProjectLink({
+  href,
+  label,
+  size = "md",
+}: {
+  href: string;
+  label: string;
+  size?: "sm" | "md";
+}) {
+  const cls =
+    size === "sm"
+      ? "mt-4 inline-flex items-center gap-2 font-mono text-[0.65rem] tracking-widest2 uppercase text-paper-dim hover:text-signal transition-colors self-start"
+      : "mt-5 inline-flex items-center gap-2 font-mono text-[0.7rem] tracking-widest2 uppercase text-paper-dim hover:text-signal transition-colors self-start";
+
+  const internal = href.startsWith("/");
+  if (internal) {
+    return (
+      <Link href={href} className={cls}>
+        {label}
+        <span aria-hidden>→</span>
+      </Link>
+    );
+  }
+  return (
+    <a href={href} target="_blank" rel="noreferrer" className={cls}>
+      {label}
+      <span aria-hidden>↗</span>
+    </a>
+  );
+}
 
 export function Projects() {
   const features = projects.filter((p) => p.feature);
@@ -64,15 +96,7 @@ export function Projects() {
               </div>
 
               {p.link ? (
-                <a
-                  href={p.link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 font-mono text-[0.7rem] tracking-widest2 uppercase text-paper-dim hover:text-signal transition-colors self-start"
-                >
-                  {p.link.label}
-                  <span aria-hidden>↗</span>
-                </a>
+                <ProjectLink href={p.link.href} label={p.link.label} size="md" />
               ) : null}
 
               {/* subtle corner flourish */}
@@ -123,15 +147,7 @@ export function Projects() {
               </div>
 
               {p.link ? (
-                <a
-                  href={p.link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 font-mono text-[0.65rem] tracking-widest2 uppercase text-paper-dim hover:text-signal transition-colors self-start"
-                >
-                  {p.link.label}
-                  <span aria-hidden>↗</span>
-                </a>
+                <ProjectLink href={p.link.href} label={p.link.label} size="sm" />
               ) : null}
             </article>
           ))}

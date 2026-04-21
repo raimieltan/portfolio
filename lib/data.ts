@@ -182,6 +182,10 @@ export const projects: Project[] = [
       "Set architectural direction and coding standards",
       "Production monitoring and deployment pipelines",
     ],
+    link: {
+      label: "Read case study →",
+      href: "/writing/rag-azure-search-nestjs",
+    },
     feature: true,
   },
   {
