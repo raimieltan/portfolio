@@ -11,11 +11,6 @@ export function About() {
           kicker="Based in Iloilo, PH · Remote across time zones"
         />
 
-
-
-
-        
-
         <div className="grid grid-cols-12 gap-8 lg:gap-14">
           <div className="col-span-12 lg:col-span-7 space-y-6 text-[1.05rem] sm:text-lg text-paper-dim leading-relaxed">
             <p className="text-paper">
