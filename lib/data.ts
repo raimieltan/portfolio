@@ -172,7 +172,7 @@ export const projects: Project[] = [
     feature: true,
   },
   {
-    title: "Prometheus RAG Platform",
+    title: "RAG Platform",
     role: "Lead Engineer — AI Integration",
     summary:
       "Retrieval-Augmented Generation solution integrating LLM inference with enterprise knowledge sources, deployed with containerized CI/CD to Azure.",
