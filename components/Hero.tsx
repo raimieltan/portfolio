@@ -1,5 +1,11 @@
 import { profile } from "@/lib/data";
 
+const HIRE_SUBJECT = encodeURIComponent("Senior engineering role — [Your Company]");
+const HIRE_BODY = encodeURIComponent(
+  "Hi Sean,\n\nI came across your portfolio and would love to discuss a potential opportunity.\n\nRole: \nCompany: \nLocation / Remote: \n\nLooking forward to connecting."
+);
+const HIRE_HREF = `mailto:raimieltan@gmail.com?subject=${HIRE_SUBJECT}&body=${HIRE_BODY}`;
+
 export function Hero() {
   return (
     <section
@@ -75,36 +81,61 @@ export function Hero() {
 
       {/* CTAs */}
       <div
-        className="reveal mt-10 sm:mt-14 flex flex-wrap items-center gap-4"
+        className="reveal mt-10 sm:mt-14 flex flex-col gap-5"
         style={{ ["--i" as string]: 4 }}
       >
-        <a
-          href="#projects"
-          className="group inline-flex items-center gap-3 bg-signal text-ink px-5 sm:px-6 py-3.5 font-mono text-xs sm:text-sm tracking-widest2 uppercase hover:bg-paper transition-colors"
-        >
-          View selected work
-          <span className="transition-transform group-hover:translate-x-1">
-            →
+        {/* Available now pill */}
+        <div className="flex items-center gap-2.5">
+          <span
+            className="inline-block h-2 w-2 rounded-full bg-signal animate-pulseDot"
+            aria-hidden="true"
+          />
+          <span className="font-mono text-[0.7rem] tracking-widest2 uppercase text-signal">
+            Available now
           </span>
-        </a>
-        <a
-          href={profile.resumeHref}
-          download
-          className="group inline-flex items-center gap-3 border hairline text-paper px-5 sm:px-6 py-3.5 font-mono text-xs sm:text-sm tracking-widest2 uppercase hover:border-signal hover:text-signal transition-colors"
-        >
-          Download resume
-          <span className="transition-transform group-hover:translate-y-0.5">
-            ↓
+          <span className="font-mono text-[0.7rem] tracking-widest2 uppercase text-muted">
+            —
           </span>
-        </a>
-        <a
-          href={profile.github}
-          target="_blank"
-          rel="noreferrer"
-          className="font-mono text-[0.72rem] tracking-widest2 uppercase text-paper-dim hover:text-signal transition-colors"
-        >
-          github.com/raimieltan ↗
-        </a>
+          <span className="font-mono text-[0.7rem] tracking-widest2 uppercase text-paper-dim">
+            {profile.status}
+          </span>
+        </div>
+
+        {/* Button row */}
+        <div className="flex flex-wrap items-center gap-4">
+          {/* Primary: Hire me */}
+          <a
+            href={HIRE_HREF}
+            aria-label="Email Sean to discuss a senior engineering role"
+            className="group inline-flex items-center gap-3 bg-signal text-ink px-6 sm:px-8 py-4 font-mono text-xs sm:text-sm tracking-widest2 uppercase font-semibold hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink transition-colors"
+          >
+            Hire me
+            <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">
+              →
+            </span>
+          </a>
+
+          {/* Secondary: Resume */}
+          <a
+            href={profile.resumeHref}
+            download
+            aria-label="Download Sean's resume as a PDF"
+            className="group inline-flex items-center gap-3 border hairline text-paper px-5 sm:px-6 py-3.5 font-mono text-xs sm:text-sm tracking-widest2 uppercase hover:border-signal hover:text-signal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink transition-colors"
+          >
+            Resume
+            <span className="transition-transform group-hover:translate-y-0.5" aria-hidden="true">
+              ↓
+            </span>
+          </a>
+
+          {/* Tertiary: View work */}
+          <a
+            href="#projects"
+            className="font-mono text-[0.72rem] tracking-widest2 uppercase text-paper-dim hover:text-signal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink transition-colors"
+          >
+            View selected work →
+          </a>
+        </div>
       </div>
 
       {/* Bottom corner annotation */}

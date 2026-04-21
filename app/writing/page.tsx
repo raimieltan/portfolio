@@ -38,6 +38,26 @@ const entries: Entry[] = [
     readingTime: "9 min read",
     tag: "Case Study",
   },
+  {
+    slug: "garage-hub-domain-modeling",
+    title: "Designing a 17-model social platform",
+    titleItalicTail: "without drowning in joins",
+    excerpt:
+      "Notes from Garage Hub — a Next.js 16 + Prisma 7 social platform spanning social, vehicles, events, clubs, and a marketplace. Domain modeling across five product surfaces, JWT auth, and the indexes that keep Postgres cheap.",
+    date: "April 2026",
+    readingTime: "8 min read",
+    tag: "Case Study",
+  },
+  {
+    slug: "draft-survey-offline-first",
+    title: "Building an offline-first maritime calculator",
+    titleItalicTail: "(and picking Tauri over Electron)",
+    excerpt:
+      "Notes from Draft Survey — a Next.js 16 + TypeScript tool that computes bulk-carrier cargo from draft readings, hydrostatic tables, and trim corrections. A zero-dependency calculation engine, an offline-only posture, and the distribution choice that made it portable.",
+    date: "April 2026",
+    readingTime: "7 min read",
+    tag: "Case Study",
+  },
 ];
 
 export default function WritingIndex() {

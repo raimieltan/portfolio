@@ -22,5 +22,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.9,
     },
+    {
+      url: `${SITE_URL}/writing/garage-hub-domain-modeling`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/writing/draft-survey-offline-first`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.9,
+    },
   ];
 }
