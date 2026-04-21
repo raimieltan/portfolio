@@ -4,7 +4,7 @@
  */
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sean-tan.dev";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://raimiel.xyz";
 
 export const SITE_NAME = "Sean Raimiel Tan";
 
